@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="/resources/css/topnav.css">
+        <link rel="stylesheet" href="/resources/css/resourcestyle.css">
+        <script src="https://kit.fontawesome.com/083e26693c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        body {
+            font-family: "Parkinsans",sans-serif;
+        }
+    </style>
+
+    <body>
+        <div class="topnavigation">
+            <button onclick="shownavoverlay()" class="menubtn"><i class="fa-solid fa-bars"></i></button>
+            <p>[ComputerBytes]&nbsp;&nbsp;[HOME]</p>
+        </div>
+
+        <div class="navoverlay" id="navoverlay" style="display: none;">
+            <div class="navoptions">
+                <button onclick="hidenavoverlay()""><i class="fa-solid fa-x"></i></button>
+                Pages
+                <hr>
+                <br>
+                <a href="/"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
+                <br>
+                <br>
+                <a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;&nbsp;About</a>
+                <br>
+                <br>
+                <a href="/resources.html"><i class="fa-solid fa-database"></i>&nbsp;&nbsp;&nbsp;Resource</a>
+            </div>
+        </div>
+
+        <div class="box1" style="background-color: rgb(234, 234, 50);color:rgb(100, 99, 68);border-bottom: 5px solid rgb(154, 170, 74);">
+            <h1 style="text-align:center;"><i class="fa-solid fa-scissors"></i>&nbsp;Snippets</h1>
+            <br>
+            <p style="text-align: center;">Item: Flat Link Button with Border</p>
+        </div>
+        <br>
+        <style>
+            .maincontent {
+                margin: 150px;
+                margin-top: 20px;
+                color: rgb(87, 87, 87);
+            }
+
+            .codesample {
+                text-align: center;
+                border-style: solid;
+                border-color: #676767;
+                border-width:1px;
+                border-radius: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            @media screen and (max-width: 800px) {
+                .maincontent {
+                    margin: 20px;
+                }
+            }
+        </style>
+        <div class="maincontent">
+            <h1>Code Details:</h1>
+            <p>This Code Snippet is a button that also has a border. This button is actually a link that has been stylized to be a button in order to give a more interactive feel compared to something <a href="#">like this</a>. Below is showing what the button will look like.</a></p>
+            <br>
+            <div class="codesample">
+                <style>
+                    .linkbutton {
+                        background-color:#73a9ff; /* replace '#73a9ff' with your color, in hex. */
+                        text-decoration:none;
+                        color:white;
+                        padding:15px;
+                        font-family:arial;
+                        border-style: solid;
+                        border-color: #4276c9;
+                        border-width:6px;
+                    }
+                </style>
+                <br>
+                <a class="linkbutton" href="#replacethiswithyourlink">Website</a>
+                <br>
+                <br>
+            </div>
+            <br>
+            <h1>Button Code:</h1>
+            <p>(You can copy paste this into your code and it should work without any problems.)</p>
+            <br>
+            <br>
+            <button class="codeboxcopy" onclick="opencode()"><i class="fa-solid fa-window-restore"></i>&nbsp;&nbsp;Open in Popup</button>
+            <div class="codebox">
+                <code>
+                    &lt;style&gt;<br>
+                    &emsp;.linkbutton {<br>
+                        &emsp;&emsp;background-color:#73a9ff;<br>
+                        &emsp;&emsp;text-decoration:none;<br>&emsp;&emsp;color:white;<br>&emsp;&emsp;padding:15px;<br>&emsp;&emsp;font-family:arial;<br>&emsp;&emsp;border-style:solid;<br>&emsp;&emsp;border-color: #4276c9;<br>&emsp;&emsp;border-width:6px;<br>
+                    &emsp;}
+                    <br>
+                    &lt;/style&gt;<br>
+                    &lt;br><br>
+                    &lt;a href="#replacethiswithyourlink" class="linkbutton">Website&lt;/a>
+                </code>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function shownavoverlay() {
+            document.getElementById('navoverlay').style.display = "block";
+        }
+        function hidenavoverlay() {
+            document.getElementById('navoverlay').style.display = "none";
+        }
+
+        function opencode() {
+            var myWindow = window.open("0301.txt", "", "width=500,height=800");
+        }
+    </script>
+</html>
