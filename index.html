@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="resources/css/topnav.css">
+        <link rel="stylesheet" href="resources/css/homestyle.css">
+        <script src="https://kit.fontawesome.com/083e26693c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        body {
+            font-family: "Parkinsans",sans-serif;
+        }
+    </style>
+
+    <body>
+        <div class="topnavigation">
+            <button onclick="shownavoverlay()" class="menubtn"><i class="fa-solid fa-bars"></i></button>
+            <p>[ComputerBytes]&nbsp;&nbsp;[HOME]</p>
+        </div>
+
+        <div class="navoverlay" id="navoverlay" style="display: none;">
+            <div class="navoptions">
+                <button onclick="hidenavoverlay()""><i class="fa-solid fa-x"></i></button>
+                Pages
+                <hr>
+                <br>
+                <a style="cursor:default;"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home<i class="fa-solid fa-arrow-left" style="float:right;"></i></a>
+                <br>
+                <br>
+                <a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;&nbsp;About</a>
+                <br>
+                <br>
+                <a href="/resources.html"><i class="fa-solid fa-database"></i>&nbsp;&nbsp;&nbsp;Resources</a>
+            </div>
+        </div>
+
+        <div class="box1">
+            <h1 style="text-align:center;"><i class="fa-solid fa-star"></i>&nbsp;Your #1 Stop for Website Solutions!<i class="fa-solid fa-star"></i></h1>
+            <br>
+            <br>
+            <p style="text-align: center;">Check out these pages!</p>
+            <br>
+            <a href="https://youtube.com/@ComputerBytes1" class="bannerbutton-yt"><i class="fa-brands fa-youtube"></i>&nbsp;Youtube</a>
+            <a href="/resources.html" class="bannerbutton-datab"><i class="fa-solid fa-database"></i>&nbsp;Resources</a>
+        </div>
+        <br>
+        <br>
+        <div class="box2">
+            <h1>Who am I?</h1>
+        </div>
+    </body>
+
+    <script>
+        function shownavoverlay() {
+            document.getElementById('navoverlay').style.display = "block";
+        }
+        function hidenavoverlay() {
+            document.getElementById('navoverlay').style.display = "none";
+        }
+    </script>
+</html>

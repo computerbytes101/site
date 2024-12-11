@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="resources/css/topnav.css">
+        <link rel="stylesheet" href="resources/css/resourcestyle.css">
+        <script src="https://kit.fontawesome.com/083e26693c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        body {
+            font-family: "Parkinsans",sans-serif;
+        }
+    </style>
+
+    <body>
+        <div class="topnavigation">
+            <button onclick="shownavoverlay()" class="menubtn"><i class="fa-solid fa-bars"></i></button>
+            <p>[ComputerBytes]&nbsp;&nbsp;[HOME]</p>
+        </div>
+
+        <div class="navoverlay" id="navoverlay" style="display: none;">
+            <div class="navoptions">
+                <button onclick="hidenavoverlay()""><i class="fa-solid fa-x"></i></button>
+                Pages
+                <hr>
+                <br>
+                <a href="/"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
+                <br>
+                <br>
+                <a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;&nbsp;About</a>
+                <br>
+                <br>
+                <a style="cursor:default;"><i class="fa-solid fa-database"></i>&nbsp;&nbsp;&nbsp;Resources<i class="fa-solid fa-arrow-left" style="float:right;"></i></a>
+            </div>
+        </div>
+
+        <div class="box1">
+            <h1 style="text-align:center;"><i class="fa-solid fa-database"></i>&nbsp;Resources</h1>
+            <br>
+            <p style="text-align: center;">Find different projects that are made here!</p>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Free')">Free</button>
+            <button class="tablinks" onclick="openCity(event, 'Paid')">Paid</button>
+            <button class="tablinks active" onclick="openCity(event, 'Snippets')">Snippets</button>
+        </div>
+        <div id="Free" class="tabcontent">
+            <h1><i class="fa-solid fa-gift"></i> Free Resources</h1>
+            <div class="insidetab">
+                <br>
+                <br>
+                <i class="fa-solid fa-face-sad-tear"></i>&nbsp;Nothing has been added here yet...
+            </div>
+        </div>
+        <div id="Paid" class="tabcontent">
+            <h1><i class="fa-solid fa-money-bill"></i> Paid Resources</h1>
+            <div class="insidetab">
+                <br>
+                <br>
+                <i class="fa-solid fa-face-sad-tear"></i>&nbsp;Nothing has been added here yet...
+            </div>
+        </div>
+        <div id="Snippets" class="tabcontent" style="display:block;">
+            <h1><i class="fa-solid fa-scissors"></i> Snippets&nbsp;<span class="tag-new">NEW</span></h1>
+            <div class="insidetab">
+                <span class="podbase">
+                    <a href="/snippets/0301.html" style="text-decoration: none;color:rgb(87, 78, 78);">
+                        <img src="/resources/images/resid1.png">
+                        <h3>Flat Button</h3>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function shownavoverlay() {
+            document.getElementById('navoverlay').style.display = "block";
+        }
+        function hidenavoverlay() {
+            document.getElementById('navoverlay').style.display = "none";
+        }
+
+        function openCity(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+}
+    </script>
+</html>
